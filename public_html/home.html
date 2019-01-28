@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>OpenWeatherApp</title>
+        <!-- Bootstrap core CSS-->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <div class="container">
+            <h1 id="mainHeading" style="text-align: center">Weather Page</h1>
+            <hr/>
+            <ul class="list-group" id="errorMessages"></ul>
+            <div class='row'>
+                <div id='zipForm' >
+                    <form class="form-horizontal" role="form" id="zipUnitsForm">
+                        <div class="form-group">
+                            <div class='col-md-6 control-label'>
+                                <label for='zip' class="col-md-8 control-label">
+                                    Zipcode:
+                                </label>
+
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control"
+                                           id='zip' min='10000' max='99999'
+                                           placeholder="Zip Code" required/>
+                                </div>
+                            </div>
+                            <div class='col-md-6 control-label'>
+                                <label for='selectUnit' class="col-md-1 control-label"
+                                       >
+                                    Units:
+                                </label>
+                                <div class="col-md-3">
+                                    <select class='form-control' id='selectUnit'>
+                                        <option value="imperial">Imperial</option>
+                                        <option value="metric">Metric</option>
+                                    </select>
+                                </div>
+                                <div class='col-md-1'>
+                                    <button type='button' class='btn btn-default'
+                                            id='getWeatherButton'>
+                                        Get Weather
+                                    </button>
+                                </div>
+                                <div class='col-md-7'>
+                                </div>
+                            </div>
+                        </div>                      
+                    </form>
+                </div>
+            </div>
+
+            <div id='showHide' style='display:none'>
+                <hr/>
+                <div class='row'>
+                    <h2 id="currentConditions"></h2>
+                    <div class="col-md-4">
+                        <div class="text-left">
+                            <p id='currentWeather'></p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="text-left">
+                            <p id='currentTemp'></p>
+                            <p id='currentHumidity'></p>
+                            <p id='currentWind'></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <hr/>
+                    <h2 id="fiveDay">Five Day Forecast</h2>
+                    <div class="col-md-2"> 
+                        <div id='1'>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2"> 
+                        <div id='2'>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2"> 
+                        <div id='3'>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2"> 
+                        <div id='4'>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2"> 
+                        <div id='5'>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2"> 
+                       <!-- empty -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
